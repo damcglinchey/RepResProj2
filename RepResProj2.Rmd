@@ -1,0 +1,18 @@
+---
+title: "RepResProj2.Rmd"
+author: "Darren McGlinchey"
+date: "January 26, 2016"
+output: html_document
+---
+
+## Data Processing
+
+Download the data
+```{r, cache=TRUE, results="hide"}
+download.file("https://d396qusza40orc.cloudfront.net/repdata%2Fdata%2FStormData.csv.bz2","data.csv.bz2", "curl")
+```
+
+Load the downloaded data
+```{r, cache=TRUE}
+df <- read.csv("data.csv.bz2")
+```
